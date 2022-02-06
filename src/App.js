@@ -23,19 +23,36 @@ function App() {
       return setHours(+hours + 1);
     }
     if (+event.target.value < 0) {
-      setMinutes(59);
-      return +hours >= 1 ? setHours(hours - 1) : null;
+      if (+hours >= 1) {
+        setMinutes(59);
+        return setHours(hours - 1);
+      }
+      if (hours <= 0) return setMinutes(0);
     }
     setMinutes(event.target.value);
   };
   const handleSecondsChange = (event) => {
     if (+event.target.value > 59) {
       setSeconds(0);
+      if (+minutes >= 59) {
+        setMinutes(0);
+        return setHours(+hours + 1);
+      }
       return setMinutes(+minutes + 1);
     }
     if (+event.target.value < 0) {
-      setSeconds(59);
-      return +minutes >= 1 ? setMinutes(minutes - 1) : null;
+      if (+minutes >= 1) {
+        setSeconds(59);
+        return setMinutes(minutes - 1);
+      }
+      if (+minutes <= 0) {
+        if (+hours > 0) {
+          setMinutes(59);
+          return setHours(hours - 1);
+        }
+        setSeconds(0);
+        return setMinutes(0);
+      }
     }
     setSeconds(event.target.value);
   };
