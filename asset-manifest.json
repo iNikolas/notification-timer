@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/notification-timer/static/css/main.03c60346.css",
+    "main.js": "/notification-timer/static/js/main.87b9dd9a.js",
+    "static/media/happyBellsNotification.wav": "/notification-timer/static/media/happyBellsNotification.72d5668f672aa6c30075.wav",
+    "index.html": "/notification-timer/index.html",
+    "main.03c60346.css.map": "/notification-timer/static/css/main.03c60346.css.map",
+    "main.87b9dd9a.js.map": "/notification-timer/static/js/main.87b9dd9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03c60346.css",
+    "static/js/main.87b9dd9a.js"
+  ]
+}
