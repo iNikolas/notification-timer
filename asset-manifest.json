@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/notification-timer/static/css/main.958623ca.css",
-    "main.js": "/notification-timer/static/js/main.de0d38ab.js",
+    "main.js": "/notification-timer/static/js/main.5dc5ff77.js",
     "static/media/happyBellsNotification.wav": "/notification-timer/static/media/happyBellsNotification.72d5668f672aa6c30075.wav",
     "index.html": "/notification-timer/index.html",
     "main.958623ca.css.map": "/notification-timer/static/css/main.958623ca.css.map",
-    "main.de0d38ab.js.map": "/notification-timer/static/js/main.de0d38ab.js.map"
+    "main.5dc5ff77.js.map": "/notification-timer/static/js/main.5dc5ff77.js.map"
   },
   "entrypoints": [
     "static/css/main.958623ca.css",
-    "static/js/main.de0d38ab.js"
+    "static/js/main.5dc5ff77.js"
   ]
 }
