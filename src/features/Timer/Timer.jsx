@@ -4,8 +4,10 @@ import formatTimeLeft from "./formatTimeLeft";
 import getRemainedTime from "./getRemainedTime";
 import getProgressValue from "./progressCircleCalculations";
 import setRemainingPathColor from "./setCircleColor";
-import playNotification from "./playNotification";
 import PropTypes from "prop-types";
+import notification from "./happyBellsNotification.wav";
+
+const audio = new Audio(notification);
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 30;
@@ -57,10 +59,10 @@ function Timer(props) {
     clearInterval(notificationTimer);
     setProgressValue(getProgressValue(timeLeft, time, FULL_DASH_ARRAY));
     if (!timeLeft && isWorking) {
-      playNotification();
+      audio.play();
       setNotificationTimer(
         setInterval(() => {
-          playNotification();
+          audio.play();
         }, 5000)
       );
     }
