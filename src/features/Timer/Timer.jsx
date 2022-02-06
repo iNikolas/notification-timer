@@ -7,7 +7,7 @@ import setRemainingPathColor from "./setCircleColor";
 import PropTypes from "prop-types";
 import notification from "./happyBellsNotification.wav";
 
-const audio = new Audio(notification);
+var audio = new Audio(notification);
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 30;
