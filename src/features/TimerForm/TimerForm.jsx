@@ -48,8 +48,8 @@ function TimerForm(props) {
       <Form.Group className="mb-3" controlId="timerMinutes">
         <Form.Label>Количество минут</Form.Label>
         <Form.Control
-          min={0}
-          max={59}
+          min={-1}
+          max={60}
           pattern="\d{1,2}"
           onChange={handleMinutesChange}
           value={minutes}
@@ -64,8 +64,8 @@ function TimerForm(props) {
       <Form.Group className="mb-3" controlId="timerSeconds">
         <Form.Label>Количество секунд</Form.Label>
         <Form.Control
-          min={0}
-          max={59}
+          min={-1}
+          max={60}
           pattern="\d{1,2}"
           onChange={handleSecondsChange}
           value={seconds}

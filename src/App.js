@@ -18,9 +18,25 @@ function App() {
     setHours(event.target.value);
   };
   const handleMinutesChange = (event) => {
+    if (+event.target.value > 59) {
+      setMinutes(0);
+      return setHours(+hours + 1);
+    }
+    if (+event.target.value < 0) {
+      setMinutes(59);
+      return +hours >= 1 ? setHours(hours - 1) : null;
+    }
     setMinutes(event.target.value);
   };
   const handleSecondsChange = (event) => {
+    if (+event.target.value > 59) {
+      setSeconds(0);
+      return setMinutes(+minutes + 1);
+    }
+    if (+event.target.value < 0) {
+      setSeconds(59);
+      return +minutes >= 1 ? setMinutes(minutes - 1) : null;
+    }
     setSeconds(event.target.value);
   };
   const handleTimerSet = () => {
