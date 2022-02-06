@@ -5,6 +5,7 @@ import getRemainedTime from "./getRemainedTime";
 import getProgressValue from "./progressCircleCalculations";
 import setRemainingPathColor from "./setCircleColor";
 import playNotification from "./playNotification";
+import PropTypes from "prop-types";
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 30;
@@ -98,5 +99,13 @@ function Timer(props) {
     </div>
   );
 }
+
+Timer.propTypes = {
+  time: PropTypes.number,
+  startingTime: PropTypes.number,
+  isWorking: PropTypes.string,
+  isPaused: PropTypes.bool,
+  setTime: PropTypes.func,
+};
 
 export default Timer;

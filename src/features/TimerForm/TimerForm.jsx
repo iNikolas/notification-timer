@@ -1,6 +1,7 @@
 import Form from "react-bootstrap/Form";
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 
 function TimerForm(props) {
   const {
@@ -87,5 +88,18 @@ function TimerForm(props) {
     </Form>
   );
 }
+
+TimerForm.propTypes = {
+  hours: PropTypes.string,
+  minutes: PropTypes.string,
+  seconds: PropTypes.string,
+  handleHoursChange: PropTypes.func,
+  handleMinutesChange: PropTypes.func,
+  handleSecondsChange: PropTypes.func,
+  toggleTimer: PropTypes.func,
+  isWorking: PropTypes.bool,
+  isPaused: PropTypes.bool,
+  handlePause: PropTypes.func,
+};
 
 export default TimerForm;

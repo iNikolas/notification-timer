@@ -1,6 +1,6 @@
 import "./App.module.css";
 import useLocalStorage from "./common/hooks/useLocalStorage";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import css from "./App.module.css";
 import TimerForm from "./features/TimerForm/TimerForm";
 import Timer from "./features/Timer/Timer";
