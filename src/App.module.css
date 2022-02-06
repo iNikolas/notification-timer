@@ -4,3 +4,9 @@
   align-items: center;
   height: 90vh;
 }
+
+@media screen and (orientation: portrait) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+}

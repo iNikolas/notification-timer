@@ -32,6 +32,8 @@ function Timer(props) {
   const [progressValue, setProgressValue] = useState(FULL_DASH_ARRAY);
 
   const remainingPathColor = setRemainingPathColor(timeLeft, COLOR_CODES);
+  const formattedTimeLeft = formatTimeLeft(timeLeft);
+  window.document.title = formattedTimeLeft;
 
   useEffect(() => {
     clearInterval(timer);
@@ -94,7 +96,7 @@ function Timer(props) {
         </g>
       </svg>
       <span id={css["base-timer-label"]} className={css["base-timer__label"]}>
-        {formatTimeLeft(timeLeft)}
+        {formattedTimeLeft}
       </span>
     </div>
   );
@@ -103,7 +105,7 @@ function Timer(props) {
 Timer.propTypes = {
   time: PropTypes.number,
   startingTime: PropTypes.number,
-  isWorking: PropTypes.string,
+  isWorking: PropTypes.bool,
   isPaused: PropTypes.bool,
   setTime: PropTypes.func,
 };
